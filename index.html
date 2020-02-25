@@ -157,16 +157,16 @@ body, html {
                     <div class="row">
                         <div class="col">
                             <label>Min:</label>
-                            <input type="number">
+                            <input id="min" type="number" >
                         </div>
                         <div class="col">
                             <label>Max:</label>
-                            <input type="number">
+                            <input id="max" type="number">
                         </div>
                     </div>
                 
                     <div class="row">
-                        <button class="btn" onclick="document.getElementById('demo').innerHTML = getRndInteger(2,93)">Prize!</button>
+                        <button class="btn" onclick="document.getElementById('demo').innerHTML = getRndInteger()">Prize!</button>
                     </div>
                 
                     <div class="row prize-text">
@@ -177,8 +177,11 @@ body, html {
         </div>
 
         <script>
-            function getRndInteger(min, max) {
-              return Math.floor(Math.random() * (max - min + 1) ) + min;
+            function getRndInteger() {
+                let min = parseInt(document.getElementById("min").value, 10);
+                let max = parseInt(document.getElementById("max").value, 10);
+
+                return Math.floor(Math.random() * (max - min + 1) ) + min;
             }
         </script>
     </div>
