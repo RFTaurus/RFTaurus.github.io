@@ -1,1 +1,186 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pengundian Pemenang Hadiah TO UTBK 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicons -->
+<link href="https://pahamify.com/wp-content/uploads/2019/08/LOGO-favicon.png" rel="icon">
+<link href="https://pahamify.com/wp-content/uploads/2019/08/LOGO-favicon.png" rel="apple-touch-icon">
+
+<style>
+* {
+    box-sizing: border-box;
+    /* border: solid 1px red */
+}
+
+/* Set height of body and the document to 100% */
+body, html {
+    background-color: #f5f7fb;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+#component-title .container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4%;
+}
+
+
+#component-title .dark-component-title{
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 2em;
+    color: #3b73c5;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#component-title .dark-component-subtitle{
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 2em;
+    color: #3b73c5;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.img-div{
+    width: 300px;
+    height: auto;
+    margin: 0% auto;
+    text-align: center
+}
+
+</style>
+</head>
+<body>
+
+    <div id="component-title">
+        <div class="container">
+            <div class="img-div">
+                <img class="img" src="https://pahamify.com/wp-content/uploads/2019/08/Logo-Versi.02.1.svg" alt="logo">
+            </div>
+            <p class="dark-component-subtitle">Pengundian Pemenang Hadiah TO UTBK 6</p>
+        </div>
+    </div>
+
+    <div>
+        <style scoped>
+            @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+            /*
+            ===================================================================
+                Util
+            ===================================================================
+            */
+            .container{
+                width: 100%;
+                max-width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 1;
+                margin: 24px 40px;
+            }
+
+            .col-2 {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 2;
+                margin: 24px 40px;
+            }
+
+            .col-4 {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 4;
+                margin: 24px 40px;
+            }
+
+            .col-8 {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 8;
+                margin: 24px 40px;
+            }
+
+            .card{
+                padding: 32px;
+                margin: 16px;
+                border-radius: 16px;
+                background-color: #ffffff;
+                box-shadow: 1px 1px 3px 1px rgba(59,115,197, 0.1);
+            }
+
+            .btn{
+                margin-left: auto;
+                margin-right: auto;
+                background: none;
+                border: none;
+                background-color: #3b73c5;
+                border-radius: 16px;
+                padding: 8px 16px;
+                color: #ffffff;
+            }
+
+            #demo{
+                text-align: center;
+                margin: 0% auto;
+                color: #3b73c5;
+                padding-top: 16px;
+                font-size: 2em;
+                line-height: 1.7em;
+            }
+        </style>
+    
+        <div id="random-form">
+            <div class="container">
+                <div class="card">
+                    <div class="row">
+                        <div class="col">
+                            <label>Min:</label>
+                            <input type="number">
+                        </div>
+                        <div class="col">
+                            <label>Max:</label>
+                            <input type="number">
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <button class="btn" onclick="document.getElementById('demo').innerHTML = getRndInteger(2,93)">Prize!</button>
+                    </div>
+                
+                    <div class="row prize-text">
+                        <p id="demo"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function getRndInteger(min, max) {
+              return Math.floor(Math.random() * (max - min + 1) ) + min;
+            }
+        </script>
+    </div>
+</body>
+</html> 
